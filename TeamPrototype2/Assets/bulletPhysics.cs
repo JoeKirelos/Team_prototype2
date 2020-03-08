@@ -5,7 +5,7 @@ using UnityEngine;
 public class bulletPhysics : MonoBehaviour
 {
     public Rigidbody2D bullet;
-    private Vector2 movement = new Vector2(1f, 0f);
+    public Vector2 movement = new Vector2(1f, 0.75f);
     public int moveSpeed = 100;
     // Start is called before the first frame update
     void Start()
@@ -18,4 +18,12 @@ public class bulletPhysics : MonoBehaviour
     {
 
     }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("Enemy"))
+    //    {
+    //       GameObject enemy = collision.gameObject;
+    //        Destroy(enemy);
+    //    }
+    //}
 }

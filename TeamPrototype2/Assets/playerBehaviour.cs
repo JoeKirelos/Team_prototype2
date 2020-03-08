@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerBehaviour : MonoBehaviour
 {
@@ -30,6 +31,10 @@ public class playerBehaviour : MonoBehaviour
         {
             animator.SetTrigger("Swing");
             SwingerOfThings();
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
