@@ -1,9 +1,8 @@
 fileFormatVersion: 2
-guid: 8a25ed6658c4fd243952725d504a54f9
-labels:
-- Water
-PrefabImporter:
+guid: eca2f6efbe9d59a45b658e6f56565d89
+NativeFormatImporter:
   externalObjects: {}
+  mainObjectFileID: 2100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
