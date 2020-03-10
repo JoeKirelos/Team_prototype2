@@ -14,6 +14,7 @@ public class playerBehaviour : MonoBehaviour
     public float dPointSize = 0.4f;
     Vector2 mousePosition;
     Vector2 direction;
+    public int hitPoints;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +37,7 @@ public class playerBehaviour : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+        Death();
     }
 
     void RotatoPotato()
@@ -57,5 +59,12 @@ public class playerBehaviour : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(deflectPoint.position, dPointSize);
+    }
+    void Death()
+    {
+        if(hitPoints<= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }
