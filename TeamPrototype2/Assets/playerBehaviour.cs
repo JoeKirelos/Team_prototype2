@@ -15,9 +15,13 @@ public class playerBehaviour : MonoBehaviour
     Vector2 mousePosition;
     Vector2 direction;
     public int hitPoints;
+
+    public AudioClip swingerSound;
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<AudioSource>().playOnAwake = false;
+        GetComponent<AudioSource>().clip = swingerSound;
         
     }
 
@@ -32,6 +36,7 @@ public class playerBehaviour : MonoBehaviour
         {
             animator.SetTrigger("Swing");
             SwingerOfThings();
+            GetComponent<AudioSource>().PlayOneShot(swingerSound);
         }
         if (Input.GetMouseButtonDown(1))
         {
@@ -60,6 +65,7 @@ public class playerBehaviour : MonoBehaviour
     {
         Gizmos.DrawWireSphere(deflectPoint.position, dPointSize);
     }
+
     void Death()
     {
         if(hitPoints<= 0)
